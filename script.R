@@ -82,10 +82,6 @@ p11 <- summarize(park_sub2, parked = mean(parked, na.rm=TRUE))
 
 names(p11) <- c("Weekday", "Uur", "parked")
 
-# ggplot(p11, aes(x = Uur, y = parked)) +
-#   facet_grid(~Weekday) +
-#   geom_line() +
-#   theme_bw()
 
 ggplot(p11, aes(x = Uur, y = parked, col = Weekday)) + geom_line(lwd = 1) + theme_bw()
 
