@@ -5,7 +5,10 @@ library(ggplot2)
 library(plotly)
 library(lubridate)
 
-# Dit duurt even
+
+#Inlezen van de data 
+
+# Er wordt een json file opgehaald van almere parking
 db <- mongo(collection = "almereparkingjson",
             url = sprintf(
               "mongodb://%s:%s@%s/%s",
@@ -16,11 +19,9 @@ db <- mongo(collection = "almereparkingjson",
 
 parking <- db$find()
 
-
 # Of lees de CSV van ooit
+#het lijkt erop dat als extra ook nog een csv wordt opgehaald. 
 parking <- read.csv("almere_parking.csv")
-
-
 
 
 
