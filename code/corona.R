@@ -23,4 +23,6 @@ library(nCov2019)
 get_nCov2019()
 
 # Inlezen
-data <- load_nCov2019()
+data <- load_nCov2019("en")
+     
+       
