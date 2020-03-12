@@ -10,3 +10,6 @@
 We hebben hier aan gewerkt om vooral gevoel te krijgen met GIT en goed te kunnen samenwerken
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/USjZcfj8yxE/0.jpg)](http://www.youtube.com/watch?v=USjZcfj8yxE)
+
+:+1: :sparkles: :camel: :tada:
+:rocket: :metal: :octocat:
