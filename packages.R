@@ -1,4 +1,4 @@
-#alle librarys staan door elkaar dit is niet handig. 
+#alle librarys die gebruikt worden in dit project
 library(mongolite)
 library(randomcoloR)
 library(ggplot2)
