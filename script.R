@@ -2,7 +2,7 @@
 source("code/packages.R")
 
 # Laden van ale functies
-source("Functies/functies.R")
+source("functies/functies.R")
 
 
 #Data bewerking
