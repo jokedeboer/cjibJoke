@@ -1,6 +1,3 @@
-# Danny en Joke
-
-
 #Inlezen van de data 
 
 # Er wordt een json file opgehaald van almere parking
@@ -46,9 +43,8 @@ park_gr <- dplyr::group_modify(park_gr, function(x,...){
   minval <- min(x$parked, na.rm = TRUE)
   x$parked <- x$parked - minval
   
-return(x)
+  return(x)
 }) %>% ungroup
-
 
 # Weer plotten
 park_sub <- filter(park_gr, 
