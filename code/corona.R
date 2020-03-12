@@ -16,3 +16,8 @@ coronavirus %>%
 
 ## install.packages("remotes")
 remotes::install_github("GuangchuangYu/nCov2019")
+
+library(nCov2019)
+
+# Laatste info downloaden
+get_nCov2019()
