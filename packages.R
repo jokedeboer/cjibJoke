@@ -1,4 +1,5 @@
 #alle librarys die gebruikt worden in dit project
+#je moet beter de code lezen dit had ik al gedaan 
 library(mongolite)
 library(randomcoloR)
 library(ggplot2)
