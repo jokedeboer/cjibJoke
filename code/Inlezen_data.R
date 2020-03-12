@@ -12,8 +12,8 @@ parking <- db$find()
 
 # Of lees de CSV van ooit
 #het lijkt erop dat als extra ook nog een csv wordt opgehaald. 
-parking <- read.csv("almere_parking.csv")
+parking <- read.csv("data/almere_parking.csv")
 
 # Kaart
 
-k <- read_excel("park.xlsx")
+k <- read_excel("data/park.xlsx")
