@@ -170,7 +170,7 @@ leaflet(k) %>%
   addTiles()
 
 
-
+#Trainen van het model
 
 # Model
 park_gr$hour <- hour(park_gr$updated)
