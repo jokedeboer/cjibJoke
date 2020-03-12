@@ -21,3 +21,6 @@ library(nCov2019)
 
 # Laatste info downloaden
 get_nCov2019()
+
+# Inlezen
+data <- load_nCov2019()
