@@ -4,6 +4,9 @@ source("packages.R")
 # Laden van ale functies
 source("Functies/functies.R")
 
+#inlezen van de data
+source("code/Inlezen_data.R")
+
 
 #Data bewerking
 source("databewerking.R")
