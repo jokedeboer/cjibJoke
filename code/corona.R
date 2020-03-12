@@ -13,3 +13,11 @@ coronavirus %>%
   summarise(total = sum(cases)) %>%
   arrange(-total) %>%
   head(20)
+
+# Get top death cases by state
+coronavirus %>%
+  filter(type == "death") %>%
+  group_by(Country.Region) %>%
+  summarise(total = sum(cases)) %>%
+  arrange(-total) %>%
+  head(20)
