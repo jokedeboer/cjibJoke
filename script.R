@@ -1,5 +1,9 @@
+#alle librarys staan door elkaar dit is niet handig. 
 library(mongolite)
-
+library(randomcoloR)
+library(ggplot2)
+library(plotly)
+library(lubridate)
 
 # Dit duurt even
 db <- mongo(collection = "almereparkingjson",
@@ -18,13 +22,7 @@ parking <- read.csv("almere_parking.csv")
 
 
 
-library(randomcoloR)
 
-library(ggplot2)
-library(plotly)
-
-
-library(lubridate)
 
 park <- arrange(parking, updated) %>%
   filter(!label %in% c("P+R","P4") ) %>%
