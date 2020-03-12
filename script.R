@@ -1,6 +1,9 @@
 # Laden van alle libraries
 source("packages.R")
 
+# Laden van ale functies
+source("Functies/functies.R")
+
 #Inlezen van de data 
 
 # Er wordt een json file opgehaald van almere parking
