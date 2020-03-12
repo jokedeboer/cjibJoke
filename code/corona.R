@@ -13,3 +13,6 @@ coronavirus %>%
   summarise(total = sum(cases)) %>%
   arrange(-total) %>%
   head(20)
+
+## install.packages("remotes")
+remotes::install_github("GuangchuangYu/nCov2019")
