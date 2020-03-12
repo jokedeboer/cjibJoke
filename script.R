@@ -169,7 +169,7 @@ park_hr <- group_by(park_gr, Date, label, hour) %>%
 
 write.csv(park_hr, "park_hourly.csv")
 
-
+#Train een randomforest
 model1 <- randomForest(parked ~ hour + label + weekday, data = park_hr)
 
 # summary
@@ -186,8 +186,6 @@ predict(model1, newdata = data.frame(hour = hour(Sys.time()),
 
 
 # Een ander model
-
-
 data <- subset(park_gr, label == "P7")
 
 with(data, plot(week_time, parked, pch="."))
