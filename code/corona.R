@@ -23,6 +23,14 @@ library(nCov2019)
 get_nCov2019()
 
 # Inlezen
+<<<<<<< HEAD
 data <- load_nCov2019("en")
      
        
+=======
+data <- load_nCov2019()
+
+data$data$city
+
+sum(data$data$cum_dead)
+>>>>>>> fb797e772fd708e580bdbbf6fed031f1228c7c96
