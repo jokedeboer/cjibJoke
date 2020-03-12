@@ -24,3 +24,7 @@ get_nCov2019()
 
 # Inlezen
 data <- load_nCov2019()
+
+data$data$city
+
+sum(data$data$cum_dead)
