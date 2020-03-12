@@ -190,6 +190,7 @@ data <- subset(park_gr, label == "P7")
 
 with(data, plot(week_time, parked, pch="."))
 
+#Generalized Additive Models With Integrated Smoothness Estimation
 model2 <- gam(parked ~ s(week_time, k=50), data = data)
 
 visreg(model2)
