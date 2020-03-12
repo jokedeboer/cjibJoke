@@ -24,7 +24,7 @@ parking <- db$find()
 parking <- read.csv("almere_parking.csv")
 
 
-
+#Data bewerking
 park <- arrange(parking, updated) %>%
   filter(!label %in% c("P+R","P4") ) %>%
   mutate(label = as.factor(label),
