@@ -4,22 +4,6 @@ source("packages.R")
 # Laden van ale functies
 source("Functies/functies.R")
 
-#Inlezen van de data 
-
-# Er wordt een json file opgehaald van almere parking
-db <- mongo(collection = "almereparkingjson",
-            url = sprintf(
-              "mongodb://%s:%s@%s/%s",
-              .conf$database$user,
-              .conf$datavase$password,
-        "almereparking"))
-
-parking <- db$find()
-
-# Of lees de CSV van ooit
-#het lijkt erop dat als extra ook nog een csv wordt opgehaald. 
-parking <- read.csv("almere_parking.csv")
-
 
 #Data bewerking
 park <- arrange(parking, updated) %>%
@@ -125,9 +109,6 @@ filter(park_gr_ave, label == "P11") %>%
 
 
 
-# Kaart
-
-k <- read_excel("park.xlsx")
 
 
 leaflet(k) %>%
