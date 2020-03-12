@@ -6,7 +6,12 @@ library(plotly)
 library(lubridate)
 library(dplyr)
 library(lubridate)
-
+library(readxl)
+library(leaflet)
+library(lubridate)
+library(randomForest)
+library(randomForestExplainer)
+library(mgcv)
 
 #Inlezen van de data 
 
@@ -132,10 +137,10 @@ filter(park_gr_ave, label == "P11") %>%
 
 
 # Kaart
-library(readxl)
+
 k <- read_excel("park.xlsx")
 
-library(leaflet)
+
 leaflet(k) %>%
   addMarkers(~lon, ~lat, label = paste(k$label, k$naam)) %>%
   addTiles()
@@ -143,7 +148,7 @@ leaflet(k) %>%
 
 
 # Samenvatting.
-library(lubridate)
+
 
 # Gemiddeld aantal auto's geparkeerd rond 12 uur op zaterdag.
 sat_park <- group_by(park, label) %>%
@@ -177,13 +182,13 @@ park_hr <- group_by(park_gr, Date, label, hour) %>%
 
 write.csv(park_hr, "park_hourly.csv")
 
-library(randomForest)
+
 model1 <- randomForest(parked ~ hour + label + weekday, data = park_hr)
 
 # summary
 model1
 
-library(randomForestExplainer)
+
 plot_predict_interaction(model1, park_hr, "weekday", "hour")
 
 
@@ -194,7 +199,7 @@ predict(model1, newdata = data.frame(hour = hour(Sys.time()),
 
 
 # Een ander model
-library(mgcv)
+
 
 data <- subset(park_gr, label == "P7")
 
