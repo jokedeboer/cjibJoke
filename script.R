@@ -1,15 +1,12 @@
 # Laden van alle libraries
-source("packages.R")
+source("code/packages.R")
 
 # Laden van ale functies
 source("Functies/functies.R")
 
-#inlezen van de data
-source("code/Inlezen_data.R")
-
 
 #Data bewerking
-source("databewerking.R")
+source("code/databewerking.R")
 
 
 # Plot van alles
