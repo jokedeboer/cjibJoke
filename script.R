@@ -1,4 +1,4 @@
-# Danny
+# Danny en Joke
 
 #Inlezen van de data 
 
